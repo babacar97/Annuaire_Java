@@ -1,11 +1,34 @@
 package Jiraws_live_youtube;
 
-public class PhoneBook {
+import java.util.Scanner;
 
+public class PhoneBook {
+	
+    public static Scanner sc = null;
+    
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Bonjour youtube debut babacar ndiaye");
+		
+	    sc = new  Scanner(System.in);
+		
+	    String userLastName = getUserInput("Entrez un nom de famille ");
+	    String userFirstName = getUserInput("Entrez un prénom ");
+	    String userPhoneNumber = getUserInput("Entrez un numero de telephone ");
+		
+	    System.out.println(userLastName);
+	    System.out.println(userFirstName);
+	    System.out.println(userPhoneNumber);
+		sc.close();
 
+	}
+	
+	public static String getUserInput(String userRequest) {
+		
+		System.out.println(userRequest);
+		String userLastName = sc.nextLine();
+		
+		return userLastName;
+		
 	}
 
 }
